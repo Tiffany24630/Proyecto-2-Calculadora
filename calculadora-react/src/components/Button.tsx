@@ -9,6 +9,11 @@ export const Button = ({ label, onClick }: Props) => {
       type='button'
       aria-label={label}
       onClick={onClick}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          onClick()
+        }
+      }}
       className='button'
     >
       {label}

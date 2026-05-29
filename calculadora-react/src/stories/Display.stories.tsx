@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react'
+
 import { Display } from '../components/Display'
 
 const meta: Meta<typeof Display> = {
@@ -12,12 +13,18 @@ type Story = StoryObj<typeof Display>
 
 export const Default: Story = {
   args: {
-    value: '123'
+    value: '12345'
   }
 }
 
 export const Error: Story = {
   args: {
     value: 'ERROR'
+  }
+}
+
+export const Decimal: Story = {
+  args: {
+    value: '3.1415'
   }
 }
