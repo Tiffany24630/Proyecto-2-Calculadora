@@ -1,5 +1,4 @@
 import { render, screen, fireEvent } from '@testing-library/react'
-
 import { Calculator } from '../components/Calculator'
 
 describe('Advanced Calculator Tests', () => {
@@ -31,13 +30,10 @@ describe('Advanced Calculator Tests', () => {
     fireEvent.click(screen.getByText('2'))
     fireEvent.click(screen.getByText('.'))
     fireEvent.click(screen.getByText('5'))
-
     fireEvent.click(screen.getByText('+'))
-
     fireEvent.click(screen.getByText('1'))
     fireEvent.click(screen.getByText('.'))
     fireEvent.click(screen.getByText('5'))
-
     fireEvent.click(screen.getByText('='))
 
     expect(screen.getByText('4')).toBeInTheDocument()
@@ -50,7 +46,7 @@ describe('Advanced Calculator Tests', () => {
     fireEvent.click(screen.getByText('.'))
     fireEvent.click(screen.getByText('.'))
 
-    expect(screen.getByText('1.')).toBeInTheDocument()
+    expect(screen.getByLabelText('calculator display')).toHaveTextContent('1.')
   })
 
   test('modulo works correctly', () => {
@@ -61,7 +57,7 @@ describe('Advanced Calculator Tests', () => {
     fireEvent.click(screen.getByText('2'))
     fireEvent.click(screen.getByText('='))
 
-    expect(screen.getByText('1')).toBeInTheDocument()
+    expect(screen.getByLabelText('calculator display')).toHaveTextContent('1.')
   })
 
   test('clear button resets calculator', () => {
