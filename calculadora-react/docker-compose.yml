@@ -4,7 +4,7 @@ services:
     container_name: calculadora-react
     ports:
       - "5998:5998"
-      - "6006:6006"
+      - "6010:6006"
     volumes:
       - .:/app
       - /app/node_modules
