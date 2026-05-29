@@ -4,7 +4,11 @@ type Props = {
 
 export const Display = ({ value }: Props) => {
   return (
-    <div className='display'>
+    <div
+      className='display'
+      aria-live='polite'
+      aria-label='calculator display'
+    >
       {value}
     </div>
   )

@@ -25,3 +25,8 @@ dist-ssr
 
 *storybook.log
 storybook-static
+node_modules
+dist
+storybook-static
+coverage
+.env
